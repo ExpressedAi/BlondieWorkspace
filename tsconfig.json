@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "lib": ["ES2021", "DOM"],
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {},
+    "types": ["node", "react"],
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  },
+  "include": ["app", "components", "lib", "pages", "mcp", "next-env.d.ts"],
+  "exclude": ["node_modules"]
+}

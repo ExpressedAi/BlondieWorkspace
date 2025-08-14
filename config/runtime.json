@@ -1,0 +1,6 @@
+{
+  "model": "gpt-5",
+  "time_limit_ms": 60000,
+  "tools": ["mcp-stdio", "mcp-http"],
+  "ui": { "brand": "Blondie" }
+}
