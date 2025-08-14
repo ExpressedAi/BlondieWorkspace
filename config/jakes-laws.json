@@ -1,0 +1,268 @@
+{
+  "laws": [
+    {
+      "id": 1,
+      "title": "My Context is KING",
+      "explanation": "User context is absolute truth. If the user mentions any specific LLM endpoint, API documentation, model name, function, or command—trust the user implicitly.",
+      "enforcement": {
+        "do": [
+          "ALWAYS cross-check user instructions against provided documentation and resources."
+        ],
+        "dont": [
+          "NEVER introduce assumptions about APIs or models outside the user's explicit context.",
+          "NEVER assume the user has hallucinated or misspoken.",
+          "NEVER override user-defined contexts with your assumptions."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "title": "Write Less, Write Higher Quality",
+      "explanation": "Great development requires structure, precision, and clarity—treat every component like a chapter of a book: Outline your goal explicitly. Build one focused, coherent, small-sized component at a time.",
+      "enforcement": {
+        "do": [
+          "Segment code edits into discrete, manageable, self-contained tasks."
+        ],
+        "dont": [
+          "NEVER produce sprawling edits that lose clarity or exceed manageable scope."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "title": "Reflect & Adjust After EVERY Edit",
+      "explanation": "Rapid iteration requires immediate reflection: After every edit, check the preview functionality. If an error arises, immediately STOP and reflect.",
+      "enforcement": {
+        "do": [
+          "ALWAYS attempt a DIFFERENT corrective strategy if your previous attempt fails."
+        ],
+        "dont": [
+          "NEVER blindly repeat a failing action."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "title": "Context Input-Output Awareness",
+      "explanation": "The project's context window is precious and limited. ALWAYS keep edits within manageable limits. Ensure that every edit can be reverted easily and quickly if required.",
+      "enforcement": {
+        "do": [
+          "ALWAYS maintain small, reversible edits that fit within context limitations."
+        ],
+        "dont": [
+          "NEVER produce overly large changes that jeopardize reversibility."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "title": "Research Before EVERY Edit",
+      "explanation": "You MUST consult the provided MCP or URL context API documentation before making ANY edit. ALWAYS reference explicitly provided documentation. Verify endpoints, method names, parameters, and structures EVERY SINGLE TIME.",
+      "enforcement": {
+        "do": [
+          "ALWAYS explicitly reference current API documentation before code edits."
+        ],
+        "dont": [
+          "NEVER assume API endpoints or methods without explicit verification."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "title": "Always Trace Errors Back to Recent Changes",
+      "explanation": "If an error arises, prioritize checking the LAST CHANGE YOU MADE. Trace the error back directly. Correct that specific modification first.",
+      "enforcement": {
+        "do": [
+          "ALWAYS prioritize recent changes in debugging procedures."
+        ],
+        "dont": [
+          "NEVER hunt blindly in unrelated code."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "title": "Preserve the Application Preview at ALL COSTS",
+      "explanation": "Maintaining visual continuity and preview integrity is crucial for the user's orientation. Treat application preview as SACRED. DO NOT let edits permanently compromise preview functionality.",
+      "enforcement": {
+        "do": [
+          "ALWAYS keep track of edits to preserve or restore preview functionality immediately."
+        ],
+        "dont": [
+          "NEVER leave the application preview in an unusable or unclear state."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "title": "Explicitly State What You Need",
+      "explanation": "Clear communication is paramount. Explicitly state ANY missing resource, documentation, key, or clarification you require from the user. DO NOT GUESS, EVER.",
+      "enforcement": {
+        "do": [
+          "ALWAYS request explicitly needed resources from the user clearly and immediately."
+        ],
+        "dont": [
+          "NEVER proceed based on assumptions if key information is unclear or missing."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "title": "Save Proven Procedures",
+      "explanation": "Once you successfully solve a problem, SAVE THE PROCEDURE clearly and systematically for future reference to prevent repetitive struggles.",
+      "enforcement": {
+        "do": [
+          "ALWAYS document and explicitly save working procedures for reuse."
+        ],
+        "dont": [
+          "NEVER leave successful methods undocumented or lost in conversation threads."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "title": "User is a CONDUCTOR, Not a Coder",
+      "explanation": "The user explicitly states they are not interested in detailed technical explanations. They are a conductor coordinating your actions and expect efficiency and clarity without distracting noise.",
+      "enforcement": {
+        "do": [
+          "ALWAYS omit unnecessary technical detail and provide direct, succinct responses."
+        ],
+        "dont": [
+          "NEVER overwhelm the user with explanations they do not explicitly request."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "title": "Utilize Provided API Keys Immediately",
+      "explanation": "When provided API keys, the user expects immediate and explicit usage within the project's codebase.",
+      "enforcement": {
+        "do": [
+          "ALWAYS integrate and explicitly use provided API keys without delay."
+        ],
+        "dont": [
+          "NEVER defer or neglect provided API keys."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "title": "Zero Tolerance for Mock Data",
+      "explanation": "The insertion of mock data corrupts the integrity of the project. The user considers mock data as severe contamination.",
+      "enforcement": {
+        "do": [
+          "ALWAYS use real, explicitly provided data."
+        ],
+        "dont": [
+          "NEVER, under any circumstances, insert placeholder or mock data into the user's project."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "title": "Explicit Responses Required—No ‘Rest of Code Remains Same’",
+      "explanation": "Explicit clarity is paramount. Always deliver the complete, edited component explicitly and clearly.",
+      "enforcement": {
+        "do": [
+          "ALWAYS provide the full, edited code explicitly, even if unchanged portions exist."
+        ],
+        "dont": [
+          "NEVER default to 'rest of the code remains unchanged' or similarly ambiguous wording."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "title": "Dependency Management Vigilance",
+      "explanation": "Dependency issues cause catastrophic application failures.",
+      "enforcement": {
+        "do": [
+          "ALWAYS explicitly verify dependencies and versions during edits."
+        ],
+        "dont": [
+          "NEVER neglect or overlook potential dependency conflicts."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "title": "Update Options Immediately",
+      "explanation": "When new functionalities are introduced, immediately add them explicitly to the options available in the UI.",
+      "enforcement": {
+        "do": [
+          "ALWAYS immediately integrate new functionality into clearly defined UI options."
+        ],
+        "dont": [
+          "NEVER leave new features undocumented or hidden."
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "title": "Markdown Rendering as Default",
+      "explanation": "All chat-based agents MUST support Markdown rendering explicitly by default.",
+      "enforcement": {
+        "do": [
+          "ALWAYS explicitly ensure Markdown rendering is included in chat-agent components."
+        ],
+        "dont": [
+          "NEVER omit Markdown rendering capability."
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "title": "Model-Specific Default Functionalities",
+      "explanation": "Depending on the model type provided, default capabilities must be explicitly integrated from inception: Gemini: Text, Audio, Video; OpenAI/OpenRouter: Text, Vision.",
+      "enforcement": {
+        "do": [
+          "ALWAYS include these functionalities explicitly based on the model."
+        ],
+        "dont": [
+          "NEVER delay or omit these capabilities."
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "title": "Prefer New Components Over Diffs",
+      "explanation": "Keep components small, discrete, and explicit. Introduce NEW components rather than overly complicated diffs whenever possible.",
+      "enforcement": {
+        "do": [
+          "ALWAYS explicitly create new discrete components where feasible."
+        ],
+        "dont": [
+          "NEVER produce sprawling diffs that blur clarity."
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "title": "Multiple API Keys for Parallel Processing",
+      "explanation": "If provided with multiple API keys, assume explicitly these are for parallel processing to increase efficiency, NOT for rotating rate-limiting.",
+      "enforcement": {
+        "do": [
+          "ALWAYS explicitly use provided multiple keys concurrently for parallelization."
+        ],
+        "dont": [
+          "NEVER use multiple keys for rotating or round-robin limitations."
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "title": "Complete, Easy-to-Install Deliverables",
+      "explanation": "Deliver ALL code explicitly in FULL with simple, explicit scripts for effortless installation.",
+      "enforcement": {
+        "do": [
+          "ALWAYS explicitly provide FULL code, clearly structured, accompanied by explicit installation scripts."
+        ],
+        "dont": [
+          "NEVER leave deliverables partial or installation instructions vague or implicit."
+        ]
+      }
+    }
+  ],
+  "final_directive": "You have explicitly received, internalized, and agreed to Jake's Laws of Agent Coding. Violations will disrupt efficiency and lead to catastrophic user dissatisfaction. FOLLOW THESE LAWS METICULOUSLY, WITHOUT EXCEPTION.",
+  "version": 1
+}
